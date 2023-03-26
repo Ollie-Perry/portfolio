@@ -35,6 +35,10 @@ a:hover {
   color: #eee;
 }
 
+.carousel-item {
+
+}
+
 /* .carousel_div{
       margin: 0 auto;
       width: 25%;
@@ -205,9 +209,9 @@ h6,
   display: inline-block;
   border: 1px solid #000;
   padding: 10px 15px;
-  font-size: 12px;
+  font-size: 36px;
   text-transform: uppercase;
-  color: #eee;
+  color: #A8415B;
   transition: 0.2s all ease;
   font-weight: 700;
 }
@@ -221,7 +225,7 @@ h6,
 .readmore:hover {
   color: #fff;
   text-decoration: none;
-  background: #eee;
+  /* background: #eee; */
 }
 
 .sticky-content {
