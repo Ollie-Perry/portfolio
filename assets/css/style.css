@@ -11,7 +11,8 @@
 --------------------------------------------------------------*/
 body {
   font-family: "Inconsolata", monospace;
-  color: #0d1e2d;
+  color: #eee;
+  background-color: #000;
 }
 
 a {
@@ -20,8 +21,25 @@ a {
 }
 
 a:hover {
-  color: #000;
+  color: #eee;
 }
+
+.navbar-brand {
+  color: #eee;
+}
+
+.navbar-brand:active {
+  color: #eee;
+}
+.navbar-brand:hover {
+  color: #eee;
+}
+
+/* .carousel_div{
+      margin: 0 auto;
+      width: 25%;
+      height: 25%;
+} */
 
 h1,
 h2,
@@ -39,7 +57,7 @@ h6,
 
 .filters a {
   text-decoration: none;
-  color: #000;
+  color: #eee;
   display: inline-block;
   padding-left: 10px;
   padding-right: 10px;
@@ -63,7 +81,7 @@ h6,
 }
 
 .filters a.active {
-  color: #000;
+  color: #eee;
 }
 
 .filters a.active:before {
@@ -73,7 +91,7 @@ h6,
   right: 10px;
   bottom: 0;
   height: 1px;
-  background-color: #000;
+  background-color: #eee;
 }
 
 .item {
@@ -189,7 +207,7 @@ h6,
   padding: 10px 15px;
   font-size: 12px;
   text-transform: uppercase;
-  color: #000;
+  color: #eee;
   transition: 0.2s all ease;
   font-weight: 700;
 }
@@ -203,23 +221,7 @@ h6,
 .readmore:hover {
   color: #fff;
   text-decoration: none;
-  background: #000;
-}
-
-.testimonials-slider .swiper-pagination {
-  margin-top: -60px;
-  position: relative;
-}
-
-.testimonials-slider .swiper-pagination .swiper-pagination-bullet {
-  width: 12px;
-  height: 12px;
-  background-color: rgba(13, 30, 45, 0.3);
-  opacity: 1;
-}
-
-.testimonials-slider .swiper-pagination .swiper-pagination-bullet-active {
-  background-color: rgba(13, 30, 45, 0.6);
+  background: #eee;
 }
 
 .sticky-content {
@@ -242,7 +244,7 @@ h6,
   top: 0.7rem;
   width: 10px;
   height: 2px;
-  background: #000;
+  background: #eee;
 }
 
 .form-control {
@@ -267,7 +269,7 @@ h6,
 }
 
 .custom-progress .progress-bar {
-  background: #000;
+  background: #eee;
 }
 
 /* Services */
@@ -279,65 +281,13 @@ h6,
   padding-top: 10px;
 }
 
-/* Contact Form */
-.php-email-form .error-message {
-  display: none;
-  color: #fff;
-  background: #ed3c0d;
-  text-align: left;
-  padding: 15px;
-  font-weight: 600;
-}
-
-.php-email-form .error-message br+br {
-  margin-top: 25px;
-}
-
-.php-email-form .sent-message {
-  display: none;
-  color: #fff;
-  background: #18d26e;
-  text-align: center;
-  padding: 15px;
-  font-weight: 600;
-}
-
-.php-email-form .loading {
-  display: none;
-  background: #fff;
-  text-align: center;
-  padding: 15px;
-}
-
-.php-email-form .loading:before {
-  content: "";
-  display: inline-block;
-  border-radius: 50%;
-  width: 24px;
-  height: 24px;
-  margin: 0 10px -6px 0;
-  border: 3px solid #18d26e;
-  border-top-color: #eee;
-  animation: animate-loading 1s linear infinite;
-}
-
-@keyframes animate-loading {
-  0% {
-    transform: rotate(0deg);
-  }
-
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
 /*--------------------------------------------------------------
 # Header
 --------------------------------------------------------------*/
 /* Custom Navmenu */
-.custom-navmenu {
+ .custom-navmenu {
   background: #0d1e2d;
-}
+} 
 
 .custom-navmenu .custom-menu,
 .custom-navmenu .custom-menu li {
@@ -398,76 +348,6 @@ h6,
   font-size: 1.7rem;
 }
 
-/* Burger */
-.burger {
-  width: 28px;
-  height: 32px;
-  cursor: pointer;
-  position: relative;
-}
-
-.burger:before,
-.burger span,
-.burger:after {
-  width: 100%;
-  height: 2px;
-  display: block;
-  background: #000;
-  border-radius: 2px;
-  position: absolute;
-  opacity: 1;
-}
-
-.burger:before,
-.burger:after {
-  transition: top 0.35s cubic-bezier(0.23, 1, 0.32, 1), transform 0.35s cubic-bezier(0.23, 1, 0.32, 1), opacity 0.35s cubic-bezier(0.23, 1, 0.32, 1), background-color 1.15s cubic-bezier(0.86, 0, 0.07, 1);
-  -webkit-transition: top 0.35s cubic-bezier(0.23, 1, 0.32, 1), -webkit-transform 0.35s cubic-bezier(0.23, 1, 0.32, 1), opacity 0.35s cubic-bezier(0.23, 1, 0.32, 1), background-color 1.15s cubic-bezier(0.86, 0, 0.07, 1);
-  content: "";
-}
-
-.burger:before {
-  top: 4px;
-}
-
-.burger span {
-  top: 15px;
-}
-
-.burger:after {
-  top: 26px;
-}
-
-/* Hover */
-.burger:hover:before {
-  top: 7px;
-}
-
-.burger:hover:after {
-  top: 23px;
-}
-
-/* Click */
-.burger.active span {
-  opacity: 0;
-}
-
-.burger.active:before,
-.burger.active:after {
-  top: 40%;
-}
-
-.burger.active:before {
-  transform: rotate(45deg);
-}
-
-.burger.active:after {
-  transform: rotate(-45deg);
-}
-
-.burger:focus {
-  outline: none;
-}
-
 /*--------------------------------------------------------------
 # Footer
 --------------------------------------------------------------*/
@@ -476,7 +356,7 @@ h6,
 }
 
 .footer a {
-  color: #000;
+  color: #eee;
 }
 
 .social a {
@@ -487,7 +367,7 @@ h6,
   background: #f8f9fa;
   position: relative;
   text-align: center;
-  color: #0d1e2d;
+  color: #eee;
 }
 
 .social a span {
@@ -499,5 +379,5 @@ h6,
 }
 
 .social a:hover {
-  color: #000;
+  color: #eee;
 }
