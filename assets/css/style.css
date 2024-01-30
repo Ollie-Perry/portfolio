@@ -358,6 +358,7 @@ h6,
 .custom-navbar {
   padding-top: 50px;
   width: 100%;
+  color: white;
 }
 
 @media (max-width: 780px) {
@@ -408,4 +409,17 @@ h6,
 .logo-footer{
  margin-top: 2%;
  color: #eee;
+}
+
+nav .navbar-nav li a{
+  color: white !important;
+  }
+
+nav .navbar-nav li a:hover{
+  color: #4d7578 !important;
+  }
+
+.portrait{
+  height: 50%;
+  width: 50%;
 }
