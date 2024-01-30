@@ -5,6 +5,35 @@
 * Author: BootstrapMade.com
 * License: https://bootstrapmade.com/license/
 */
+
+let lastScrollTop = 0;
+  const threshold = 50; // Set the threshold value (in pixels)
+  let accumulatedScroll = 0; // Accumulator for tracked scroll distance
+
+  window.addEventListener("scroll", function() {
+    let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+    let scrollDelta = Math.abs(currentScroll - lastScrollTop); // Calculate the absolute scroll distance
+
+    // Accumulate the scroll distance regardless of direction
+    accumulatedScroll += scrollDelta;
+
+    if (accumulatedScroll > threshold) {
+      if (currentScroll > lastScrollTop && currentScroll > threshold) {
+        // Scrolling down and past the threshold
+        document.querySelector('.navbar').classList.add('hidden');
+      } else {
+        // Scrolling up
+        document.querySelector('.navbar').classList.remove('hidden');
+      }
+      // Reset the accumulated scroll after acting on a significant scroll event
+      accumulatedScroll = 0;
+    }
+
+    lastScrollTop = currentScroll; // Update the last scroll position to the current position
+  }, false);
+
+
+
 (function() {
   "use strict";
 

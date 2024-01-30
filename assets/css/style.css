@@ -13,6 +13,7 @@ body {
   font-family: "Inconsolata", monospace;
   color: #eee;
   background-color: #000;
+  padding-top: 45px;
 }
 
 a {
@@ -356,9 +357,11 @@ h6,
 
 /* Custom Navbar */
 .custom-navbar {
-  padding-top: 50px;
+  padding-top: 5px;
   width: 100%;
   color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease-in-out; /* Smooth transition */
 }
 
 @media (max-width: 780px) {
@@ -422,4 +425,8 @@ nav .navbar-nav li a:hover{
 .portrait{
   height: 50%;
   width: 50%;
+}
+
+.hidden {
+  transform: translateY(-100%); /* Move the navbar out of the top of the viewport */
 }
