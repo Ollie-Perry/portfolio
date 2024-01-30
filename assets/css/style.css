@@ -13,7 +13,7 @@ body {
   font-family: "Inconsolata", monospace;
   color: #eee;
   background-color: #000;
-  padding-top: 45px;
+  padding-top: 50px;
 }
 
 a {
@@ -28,24 +28,6 @@ a:hover {
 .navbar-brand {
   color: #eee;
 
-}
-
-.chromatic {
-  text-shadow: 3px 2px 2px rgba(251, 12, 12,1), 0px -1px 3px rgba(12, 79, 251,.5),-3px 0px 2px rgba(52, 251, 12, 1);
-  animation: chromaticMove 4500ms ease infinite,pulse ease 200ms  infinite;
-}
-
-@keyframes pulse { 
-  0%{ opacity:.9;transform: skewX(.5deg);}
-  25%{ opacity:1;}
-  50%{opacity:.9;}
-  75%{ opacity:1; transform:skewX(.5deg);}
-  100%{opacity:.9;}
-}
-@keyframes chromaticMove { 
-  0%{text-shadow: 3px 2px 2px rgba(251, 12, 12,1), 0px -1px 3px rgba(12, 79, 251,.5),0px 0px -2px rgba(52, 251, 12, 1);}
-  50%{text-shadow: 3px 2px 2px rgba(251, 12, 12,1), 0px -1px 3px rgba(12, 79, 251,.5),-3px 2px 3px rgba(52, 251, 12, 1);}
-  100%{text-shadow: 3px 2px 2px rgba(251, 12, 12,1), 0px -1px 3px rgba(12, 79, 251,.5),2px -1px 2px rgba(52, 251, 12, 1);}
 }
 
 .navbar-brand:active {
@@ -310,7 +292,7 @@ h6,
 --------------------------------------------------------------*/
 /* Custom Navmenu */
  .custom-navmenu {
-  background: #0d1e2d;
+  background-color: rgba(0, 0, 0, 0.9);
 } 
 
 .custom-navmenu .custom-menu,
@@ -360,7 +342,7 @@ h6,
   padding-top: 5px;
   width: 100%;
   color: white;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.9);
   transition: transform 0.3s ease-in-out; /* Smooth transition */
 }
 
@@ -429,4 +411,21 @@ nav .navbar-nav li a:hover{
 
 .hidden {
   transform: translateY(-100%); /* Move the navbar out of the top of the viewport */
+}
+
+.dropdown-item:hover {
+  outline: none; /* Removes the default outline */
+  background-color: transparent; /* Optional: Adds a custom background color on focus for better visibility */
+  /* Add any other custom styles for focused dropdown items here */
+}
+
+.dropdown-item:focus {
+  outline: none; /* Removes the default outline */
+  background-color: transparent; /* Optional: Adds a custom background color on focus for better visibility */
+  /* Add any other custom styles for focused dropdown items here */
+}
+
+.navbar-toggler-icon {
+  filter: invert(100%); /* Inverts the color, making a black icon white */
+  outline: none;
 }
