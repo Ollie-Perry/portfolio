@@ -34,6 +34,26 @@ let lastScrollTop = 0;
 
 
 
+  document.getElementById('logo').addEventListener('mouseenter', function() {
+    this.setAttribute('src', 'assets/img/about/Logo Hover-01.svg');
+  });
+  
+  document.getElementById('logo').addEventListener('mouseleave', function() {
+    this.setAttribute('src', 'assets/img/about/Logo-01.svg');
+  });
+
+
+  document.getElementById('to-top').addEventListener('mouseenter', function() {
+    document.getElementById('logo-footer').src = 'assets/img/about/Logo Hover-01.svg'; // Change to hover state SVG
+  });
+  
+  document.getElementById('to-top').addEventListener('mouseleave', function() {
+    document.getElementById('logo-footer').src = 'assets/img/about/Logo-01.svg'; // Revert to original SVG
+  });
+
+
+
+
 (function() {
   "use strict";
 
